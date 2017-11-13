@@ -3,9 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="teal">
+        <meta property="og:title" content="Vue.js Search UI">
+        <meta property="og:url" content="https://yeonmu4121.github.io/vuejs-search-ui/">
+        <meta property="og:image" content="og.png">
+        <meta property="og:description" content="Vue.js를 이용한 실시간 포스트 검색 UI">
         <title>Vue.js Search UI</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="master.css">
     </head>
     <body>
@@ -13,7 +19,7 @@
             <h1>Vue.js Search UI</h1>
             <div id="search">
                 <i class="fa fa-search fa-inverse fa-lg" aria-hidden="true"></i>
-                <input type="text" v-model="word">
+                <input type="text" v-model="word" placeholder="Search keyword">
             </div>
             <div id="post-list">
                 <a class="post"

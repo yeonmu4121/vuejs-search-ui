@@ -48,6 +48,11 @@ h1 {
     text-align: center;
 }
 
+::-webkit-input-placeholder {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 #post-list {
     display: flex;
     justify-content: center;
