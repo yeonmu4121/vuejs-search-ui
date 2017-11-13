@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Vue.js Search UI</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="master.css">
+    </head>
+    <body>
+        <div id="engine" class="container">
+            <h1>Vue.js Search UI</h1>
+            <div id="search">
+                <i class="fa fa-search fa-inverse fa-lg" aria-hidden="true"></i>
+                <input type="text" v-model="word">
+            </div>
+            <div id="post-list">
+                <a class="post"
+                    v-for="post in posts"
+                    v-if="post.title.indexOf(word) != -1 || post.content.indexOf(word) != -1"
+                    v-on:click="post.expanded = !post.expanded" >
+                    <h2 class="title">{{ post.title }}</h2>
+                    <hr>
+                    <p class="content">{{ post.expanded ? post.content : truncate(post.content, 200) }}</p>
+                </a>
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

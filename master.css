@@ -1,0 +1,122 @@
+html {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgb(70, 200, 200), rgb(0, 128, 128));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#search {
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1%;
+    display: flex;
+}
+
+#search .fa {
+    margin-right: 0.8rem;
+}
+
+#search input {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    flex: 1;
+    width: 93%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+#post-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a.post {
+    display: table;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    min-height: 100px;
+    padding: 1%;
+    margin: 2%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.post:hover {
+    opacity: 0.9;
+}
+
+.title {
+    color: rgb(20, 100, 100);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 128, 128, 0.75), rgba(0, 0, 0, 0));
+}
+
+.content {
+    margin-left: 7%;
+    margin-right: 7%;
+    color: rgb(50, 50, 50);
+}
+
+@media (min-width: 800px) {
+    .container {
+        margin-top: 8%;
+    }
+
+    #search {
+        width: 50%;
+        max-width: 600px;
+    }
+
+    #post-list {
+        width: 60%;
+        max-width: 700px;
+    }
+
+    .title {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+    #search {
+        width: 90%;
+    }
+
+    #post-list {
+        width: 95%;
+    }
+
+    .title {
+        margin-left: 7%;
+    }
+}
