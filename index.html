@@ -16,16 +16,18 @@
                 <i class="fa fa-search fa-inverse fa-lg" aria-hidden="true"></i>
                 <input type="text" v-model="word" placeholder="Search keyword">
             </div>
-            <div id="post-list">
-                <a class="post"
+            <ul id="post-list">
+                <li class="post"
                     v-for="post in posts"
                     v-if="post.title.indexOf(word) != -1 || post.content.indexOf(word) != -1"
-                    v-on:click="post.expanded = !post.expanded" >
-                    <h2 class="title">{{ post.title }}</h2>
-                    <hr>
-                    <p class="content">{{ post.expanded ? post.content : truncate(post.content, 200) }}</p>
-                </a>
-            </div>
+                    v-on:click="post.expanded = !post.expanded">
+                    <a>
+                        <h2 class="title">{{ post.title }}</h2>
+                        <hr>
+                        <p class="content">{{ post.expanded ? post.content : truncate(post.content, 200) }}</p>
+                    </a>
+                </li>
+            </ul>
         </div>
         <script src="https://unpkg.com/vue"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
