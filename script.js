@@ -2,10 +2,16 @@ var app = new Vue({
     el: '#engine',
     data: {
         posts: [],
-        word: ''
+        keyword: ''
     },
     methods: {
-        truncate: (s, len) => {
+        exists: function(post) {
+            var keyword = this.keyword.toLowerCase();
+            var title = post.title.toLowerCase();
+            var content = post.content.toLowerCase();
+            return title.indexOf(keyword) != -1 || content.indexOf(keyword) != -1;
+        },
+        truncate: function(s, len) {
             var sub = s.substring(0, len);
             if(sub.length == len)
                 return sub + '...';

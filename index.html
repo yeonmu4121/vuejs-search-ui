@@ -14,12 +14,12 @@
             <h1>Vue.js Search UI</h1>
             <div id="search">
                 <i class="fa fa-search fa-inverse fa-lg" aria-hidden="true"></i>
-                <input type="text" v-model="word" placeholder="Search keyword">
+                <input type="text" v-model="keyword" placeholder="Search keyword">
             </div>
             <ul id="post-list">
                 <li class="post"
                     v-for="post in posts"
-                    v-if="post.title.indexOf(word) != -1 || post.content.indexOf(word) != -1"
+                    v-if="exists(post)"
                     v-on:click="post.expanded = !post.expanded">
                     <a>
                         <h2 class="title">{{ post.title }}</h2>
