@@ -1,0 +1,36 @@
+{
+  "name": "vuejs-search-ui",
+  "version": "1.0.0",
+  "description": "Vue.js, axios를 이용한 실시간 포스트 검색 UI입니다. 긴 포스트는 누르면 펼쳐집니다.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonmu4121/vuejs-search-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeonmu4121/vuejs-search-ui/issues"
+  },
+  "homepage": "https://yeonmu4121.github.io/vuejs-search-ui",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.1.4",
+    "css-loader": "^3.0.0",
+    "html-loader": "^0.5.5",
+    "style-loader": "^0.23.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
